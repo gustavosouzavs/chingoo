@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { BgAnimation } from "./components/bg-animation";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { VideoIcon } from '@radix-ui/react-icons'
 
 export const metadata: Metadata = {
@@ -45,7 +44,7 @@ export default function Home() {
                   <CardTitle className='text-center text-3xl uppercase tracking-widest'>Webtoons</CardTitle>
                 </CardHeader>
                 <CardDescription className='px-4 flex flex-col gap-2'>
-                  <img src='https://media.reaperscans.net/file/7BSHk1m/y0rsqzin4kecjtqwdk31bmwb.webp' className='w-[300px] border-b h-auto self-center' />
+                  <img alt='' src='https://media.reaperscans.net/file/7BSHk1m/y0rsqzin4kecjtqwdk31bmwb.webp' className='w-[300px] border-b h-auto self-center' />
                 </CardDescription>
               </Card>
               <Card>
