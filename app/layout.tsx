@@ -1,15 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
-
-const poppins = localFont({
-  src: "./fonts/Poppins-Regular.ttf",
-  variable: "--font-poppins-regular",
-  weight: "100 500",
-  style: "normal",
-});
 
 const inter = Inter({
   subsets: ["latin"],
