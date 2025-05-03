@@ -1,85 +1,129 @@
 import type { Metadata } from "next";
 import { BgAnimation } from "./components/bg-animation";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { VideoIcon } from '@radix-ui/react-icons'
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { VideoIcon } from "@radix-ui/react-icons";
+import { h1, h2, h4, p } from "@/components/ui/typography";
+import { Button } from "@/components/ui/button";
+import { HomepageCarousel } from "@/components/carousel";
+import { PackageCarousel } from "@/components/package-carousel";
 
 export const metadata: Metadata = {
-  title: 'Chingoo - Like Talking to a Friend',
-  description: 'Transforming stories through heart and creativity. Our expert translators go beyond word-for-word translation, capturing the nuances of your content to ensure your message resonates deeply with audiences, creating truly human connections.'
-}
+  title: "Chingoo - Like Talking to a Friend",
+  description:
+    "Transforming stories through heart and creativity. Our expert translators go beyond word-for-word translation, capturing the nuances of your content to ensure your message resonates deeply with audiences, creating truly human connections.",
+};
 
 export default function Home() {
   return (
     <div>
       <main className="flex flex-col items-center sm:items-start">
-        <section id='intro' className='container py-[200px] overflow-hidden h-fit'>
-          <BgAnimation />
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div />
-            <div className='flex flex-col gap-2'>
-              <h1 className='font-bold text-3xl'>CHINGOO</h1>
-              <h1 className="text-4xl font-bold text-center sm:text-left">Like Talking to a Friend</h1>
-              <p className="text-xl text-center sm:text-left">Transforming stories through heart and creativity. Our expert translators go beyond word-for-word translation, capturing the nuances of your content to ensure your message resonates deeply with audiences, creating truly human connections
+        <section
+          id="intro"
+          className="bg-primary/30 w-full overflow-hidden h-fit relative"
+        >
+          <img
+            src="/image.png"
+            className="absolute bottom-[40px] right-[160px] w-[700px] h-auto z-10 opacity-50 rotate-12"
+          />
+          <img
+            src="/main-0001.png"
+            className="absolute bottom-0 right-[120px] w-[450px] h-auto z-20"
+          />
+          <div className="grid grid-cols-1 container pt-[200px] pb-[200px]">
+            <div className="flex flex-col gap-2">
+              <h1 className={h1()}>Like Talking to a Friend</h1>
+              <h2 className={h4()}>
+                Unlock your content’s global potential with friendly, localized
+                translations
+              </h2>
+              <Button className="w-fit text-xl py-4" size={"lg"}>
+                Get a quote now!{" "}
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section id="info" className="w-full overflow-hidden h-fit relative">
+          <div className="container flex items-center justify-center py-20">
+            <div className="flex flex-col gap-2 max-w-2xl">
+              <h1
+                className={
+                  "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl uppercase text-center"
+                }
+              >
+                Translation with a human touch:
+              </h1>
+              <p className={"leading-7 [&:not(:first-child)]:mt-6 text-center"}>
+                {`At Chingoo, we believe that great storytelling deserves more
+                than just word-for-word translation—it requires heart and
+                creativity. That’s why every project is managed by experienced
+                translators who understand the nuances of your content to ensure
+                your story connects with audiences on a truly human level.
+                  `}
               </p>
             </div>
           </div>
         </section>
-        <section id='info' className='w-full h-full bg-background shadow-lg relative z-[100]'>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between container items-center px-8 py-12">
-            <div className="flex flex-col gap-2 text-left shrink-0">
-              <h1 className='font-bold text-5xl text-primary shrink-0'>Translation With</h1>
-              <h1 className='font-bold text-5xl text-primary shrink-0'>Human Touch</h1>
+        <section
+          id="services"
+          className="w-full bg-primary/40 overflow-hidden h-fit relative"
+        >
+          <div className="container grid grid-cols-1 lg:grid-cols-3 gap-4 py-20">
+            <div className="flex flex-col gap-2 items-center">
+              <img
+                src="/comic-illustration.png"
+                className="w-fit h-[500px] shrink-0"
+              />
+              <h1 className={h1()}>Webtoon</h1>
             </div>
-            <p className='text-xl'>
-              At Chingoo, we believe that great storytelling deserves more than just word-for-word translation—it requires heart and creativity. That’s why every project is managed by experienced translators who understand the nuances of your content to ensure your story connect with audiences on a truly human level.
+            <div className="flex flex-col gap-2 items-center">
+              <img src="/novel-illustration.png" className="w-auto h-[500px]" />
+              <h1 className={h1()}>Novel</h1>
+            </div>
+            <div className="flex flex-col gap-2 items-center">
+              <img src="/video-illustration.png" className="w-auto h-[500px]" />
+              <h1 className={h1()}>Web Videos</h1>
+            </div>
+          </div>
+        </section>
+        <section className="w-full overflow-hidden h-fit relative">
+          <div className="container flex flex-col items-center gap-10 justify-center py-20">
+            <h1
+              className={
+                "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center"
+              }
+            >
+              Start to Finish Localization Packages
+            </h1>
+            <HomepageCarousel />
+          </div>
+        </section>
+        <section className="w-full overflow-hidden h-fit relative bg-primary/30">
+          <div className="container flex flex-col items-center gap-10 justify-center py-20 px-5 lg:px-0">
+            <h1
+              className={
+                "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl uppercase text-center"
+              }
+            >
+              Expertise across various genres
+            </h1>
+            <PackageCarousel />
+            <p>
+              {`We offer flexible project scaling, can accommodate special
+              requirements, and provide express delivery options to meet tight
+              deadlines—whatever your project needs, we’ve got you covered.`}
+            </p>
+            <p>
+              {`We at chingoo are excited to help you bring your content to the global stage.`}
             </p>
           </div>
         </section>
-        <section id='about' className='w-full h-full bg-primary shadow-lg relative z-[100]'>
-          <div className="container flex flex-col gap-8 px-8 py-16">
-            <h1 className='text-white font-bold text-5xl text-center'>Full Package Localization</h1>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle className='text-center text-3xl uppercase tracking-widest'>Webtoons</CardTitle>
-                </CardHeader>
-                <CardDescription className='px-4 flex flex-col gap-2'>
-                  <img alt='' src='https://media.reaperscans.net/file/7BSHk1m/y0rsqzin4kecjtqwdk31bmwb.webp' className='w-[300px] border-b h-auto self-center' />
-                </CardDescription>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className='text-center text-3xl uppercase tracking-widest'>WEBNOVELS</CardTitle>
-                </CardHeader>
-                <CardDescription className='px-4 flex flex-col gap-2'>
-                  <img
-                    alt="Overgeared"
-                    className='w-[200px] border-b h-auto self-center shadow-lg rounded'
-                    src="https://cdn.wuxiaworld.com/images/covers/og.webp?v=ee043d947587ae919ee3df561ba5890ff1bfa2d8"
-                    style={{ display: "inline-block" }}
-                  />
-
-
-                </CardDescription>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className='text-center text-3xl uppercase tracking-widest'>WEBVIDEOS</CardTitle>
-                </CardHeader>
-                <CardDescription className='px-4 flex flex-col gap-2'>
-                  <VideoIcon className='h-32 w-32 self-center' />
-
-
-                </CardDescription>
-              </Card>
-
-            </div>
-          </div>
-        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-
-      </footer>
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </div>
   );
 }

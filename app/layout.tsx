@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 
@@ -7,7 +8,14 @@ const poppins = localFont({
   src: "./fonts/Poppins-Regular.ttf",
   variable: "--font-poppins-regular",
   weight: "100 500",
-  style: 'normal'
+  style: "normal",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  weight: "variable",
 });
 
 export const metadata: Metadata = {
@@ -22,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.className} antialiased`}
-      >
+      <body className={`${inter.className} antialiased`}>
         <Header />
         {children}
       </body>
