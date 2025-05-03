@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
-import { BgAnimation } from "./components/bg-animation";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { VideoIcon } from "@radix-ui/react-icons";
-import { h1, h2, h4, p } from "@/components/ui/typography";
+import { h1, h4 } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import { HomepageCarousel } from "@/components/carousel";
 import { PackageCarousel } from "@/components/package-carousel";
