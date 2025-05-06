@@ -5,6 +5,7 @@ import { HomepageCarousel } from "@/components/carousel";
 import { PackageCarousel } from "@/components/package-carousel";
 import Link from "next/link";
 import ContactPage from "./components/contact-me-form";
+import { IllustrationsCarousel } from "./components/illustrations-carousel";
 
 export const metadata: Metadata = {
   title: "Chingoo - Like Talking to a Friend",
@@ -22,13 +23,10 @@ export default function Home() {
         >
           <img
             src="/image.png"
-            className="absolute bottom-[40px] right-[160px] w-[700px] h-auto z-10 opacity-50 rotate-12"
+            className="absolute bottom-0 right-0  w-[300px] lg:w-[700px] h-auto z-10"
           />
-          <img
-            src="/main-0001.png"
-            className="absolute bottom-0 right-[120px] w-[450px] h-auto z-20"
-          />
-          <div className="grid grid-cols-1 container pt-[200px] pb-[200px]">
+
+          <div className="grid grid-cols-1 container px-5 lg:px-0 pt-[80px] lg:pt-[200px] pb-[200px] z-[100] relative">
             <div className="flex flex-col gap-2">
               <h1 className={h1()}>Like Talking to a Friend</h1>
               <h2 className={h4()}>
@@ -53,7 +51,7 @@ export default function Home() {
               >
                 Translation with a human touch:
               </h1>
-              <p className={"leading-7 [&:not(:first-child)]:mt-6 text-center"}>
+              <p className="leading-7 [&:not(:first-child)]:mt-6 text-center">
                 {`At Chingoo, we believe that great storytelling deserves more
                 than just word-for-word translation—it requires heart and
                 creativity. That’s why every project is managed by experienced
@@ -68,13 +66,19 @@ export default function Home() {
           id="services"
           className="w-full bg-primary/40 overflow-hidden h-fit relative"
         >
-          <div className="container grid grid-cols-1 lg:grid-cols-3 gap-4 py-20">
+          <div className="hidden lg:grid container grid-cols-1 lg:grid-cols-3 gap-4 py-20">
             <div className="flex flex-col gap-2 items-center">
               <img
                 src="/comic-illustration.png"
                 className="w-fit h-[375px] shrink-0"
               />
-              <h1 className={h1()}>Webtoon</h1>
+              <h1
+                className={
+                  "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
+                }
+              >
+                Webtoon
+              </h1>
             </div>
             <div className="flex flex-col gap-2 items-center">
               <img src="/novel-illustration.png" className="w-auto h-[375px]" />
@@ -84,6 +88,9 @@ export default function Home() {
               <img src="/video-illustration.png" className="w-auto h-[375px]" />
               <h1 className={h1()}>Web Videos</h1>
             </div>
+          </div>
+          <div className="lg:hidden py-14">
+            <IllustrationsCarousel />
           </div>
         </section>
         <section className="w-full overflow-hidden h-fit relative">
@@ -99,9 +106,9 @@ export default function Home() {
           </div>
         </section>
         <section className="w-full overflow-hidden h-fit relative bg-primary/30 shadow-md">
-          <div className="container grid grid-cols-1 lg:grid-cols-2 items-center gap-10 justify-center py-4 px-5 lg:px-0">
+          <div className="container grid grid-cols-1 lg:grid-cols-2 items-center gap-10 justify-center py-10 lg:py-4 px-5 lg:px-0">
             <div className="flex flex-col">
-              <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+              <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl">
                 Localization Philosophy
               </h1>
               <p className="leading-7 [&:not(:first-child)]:mt-6 lg:mr-36">
@@ -128,7 +135,10 @@ export default function Home() {
         </section>
         <section className="bg-primary/30 w-full py-20">
           <div className="container px-5 lg:px-0 flex flex-col lg:flex-row gap-12 justify-center items-center">
-            <img src="/express-delivery.png" className="h-full w-[20%]" />
+            <img
+              src="/express-delivery.png"
+              className="h-full w-[50%] lg:w-[20%]"
+            />
             <p className="leading-7 [&:not(:first-child)]:mt-6 text-left text-xl font-extrabold lg:text-2xl">
               {`We offer flexible project scaling, can accommodate special
               requirements, and provide express delivery options to meet tight

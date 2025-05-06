@@ -213,7 +213,7 @@ export const PackageCarousel = () => {
                 "font-semibold text-center text-white text-sm lg:text-5xl"
               }
             >
-              Romance & Fantasy
+              Fantasy Romance
             </h1>
           </div>
         </CarouselItem>

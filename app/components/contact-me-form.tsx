@@ -88,7 +88,7 @@ export default function ContactPage(): JSX.Element {
         <div className="flex flex-col justify-center">
           <Card className="shadow-none border-0">
             <CardContent className="space-y-6">
-              <h1 className="text-2xl lg:text-4xl font-extrabold mr-40">
+              <h1 className="text-2xl lg:text-4xl font-extrabold lg:mr-40">
                 We at Chingoo are excited to help you bring your content to the
                 global stage.
               </h1>
