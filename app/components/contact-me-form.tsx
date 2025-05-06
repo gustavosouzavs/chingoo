@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import {
   Card,
@@ -106,8 +106,8 @@ export default function ContactPage(): JSX.Element {
             <CardHeader>
               <CardTitle className="text-2xl">Contact Us Form</CardTitle>
               <CardDescription>
-                Fill out the form below and we'll get back to you as soon as
-                possible.
+                {`Fill out the form below and we'll get back to you as soon as
+                possible.`}
               </CardDescription>
             </CardHeader>
             <CardContent>

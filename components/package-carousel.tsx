@@ -6,11 +6,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { useCallback, useEffect, useRef, useState } from "react";
-import {
-  EmblaCarouselType,
-  EmblaEventType,
-  EmblaOptionsType,
-} from "embla-carousel";
+import { EmblaEventType } from "embla-carousel";
 
 const TWEEN_FACTOR_BASE = 0.39;
 
@@ -20,7 +16,6 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 export const PackageCarousel = () => {
   const [emblaApi, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(1);
-  const [count, setCount] = useState(0);
 
   const tweenFactor = useRef(0);
 
